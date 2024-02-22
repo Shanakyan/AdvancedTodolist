@@ -1,0 +1,225 @@
+@import url('https://fonts.cdnfonts.com/css/Inter');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Inter;    
+    background: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:  20px;
+}
+.header{
+    width: 100%;
+    max-width: 474px;
+    margin: 155px auto 32px auto;
+}
+.header__title{
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: left;
+}
+.main {
+    border-radius: 16px;
+    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.16);
+    background: rgb(255, 255, 255);
+    
+    width: 100%;
+    max-width: 596px;   
+    margin: 0 auto; 
+    /* padding: 24px; */
+}
+.container {
+    width: 100%;
+    max-width: 594px;
+
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    gap:24px;
+    padding: 24px;
+   
+}
+
+.form__input {
+    width: 100%;
+    max-width: 356px;   
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    padding: 9px 31px 8px 13px;
+    border: 1px solid rgb(39, 40, 41);
+    color: rgb(84, 89, 94);   
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.form__input :focus{
+    outline: 2px solid  rgb(220, 53, 69);
+  
+}
+.form__btn {
+    border: none;
+    border-radius: 4px;
+    background: rgb(39, 40, 41);
+    padding: 10px 16px 10px 16px;
+    width: 100%;
+    max-width: 166px; 
+    transition: all 0.3s ease;  
+}
+.form__btn:hover{  
+   
+    cursor: pointer;  
+    background-color: transparent;
+    border: 1px solid  rgb(39, 40, 41);;  
+    color: rgb(39, 40, 41);
+}
+.field{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 24px 24px 0 24px;
+    
+}
+
+.field:first-child{
+    border-top: 1px solid grey;
+}
+.field:last-child{
+    padding-bottom: 24px;
+}
+.list__label{
+    color: rgb(84, 89, 94);    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    
+} 
+.list_checkbox{
+    margin-right: 15px;
+}              
+.block-check-del{
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+}
+.change-item{
+    width: 16px;
+    margin-right: 20px;
+    transition: all 0.4s ease;
+}
+.change-item:hover{
+    transform: scale(1.3);
+    
+}
+.delete-item{
+    
+    transition: all 0.4s ease;
+
+}
+.delete-item:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.list__delete-btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding: 18px 24px;
+
+    border-radius: 0px 0px 16px 16px;
+    background: rgb(245, 245, 245);
+}
+
+.button {
+    padding: 10px 16px;
+    color: rgb(255, 255, 255);   
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 4px;
+    border: 0;
+    transition: all 0.3s ease;
+
+}
+button:hover{
+    background: rgb(39, 40, 41);    
+    cursor: pointer;    
+}
+.grey-btn {
+    background: rgb(108, 117, 125);
+    margin-right: 24px; 
+}
+.red-btn {
+    background: rgb(220, 53, 69);
+}
+.d-none{
+    display: none;
+}
+/* .check{
+
+} */
+
+.checkbox{   
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip:rect(0 0 0 0);    
+}
+.checkbox{   
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip:rect(0 0 0 0); 
+     
+}
+.check_box{
+    /* position: absolute; */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip:rect(0 0 0 0);  
+}
+
+.check_box::before{
+    position: absolute; 
+    content: "✏️";
+    margin-left: -2.2em;
+}
+.change_box{
+    width:1px;
+    height: 1px;
+}
+.change_box::before{
+    position: absolute; 
+    content: "✅";
+    margin-left: -2.2em;
+}
+.list_input{
+ 
+    width: 100%;
+    max-width: 250px;   
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    padding: 5px 5px 8px 15px;
+    /* border: 0; */
+}
+.out-line{    
+    border: 0;
+}
