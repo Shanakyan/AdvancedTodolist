@@ -16,7 +16,7 @@ let firstUpperLetter = (str) => str.split('')[0].toUpperCase()+str.slice(1);
 let LS = window.localStorage;
 let arr = [];
 
-function createList(str, chek){
+function createList(str, check){
     count++
     const blockLabel = document.createElement("div");
     blockLabel.classList.add("field");
@@ -26,8 +26,7 @@ function createList(str, chek){
     label.setAttribute("for", `checkbox${count}`)
     label.classList.add("list__label");
     // label.innerText = formInput.value;
-    label.classList.add(`${chek}`);
-    
+
     let input = document.createElement("input");
     input.setAttribute("type", "checkbox");
     input.setAttribute("id", `checkbox${count}`);
@@ -46,7 +45,7 @@ function createList(str, chek){
     // span1.classList.add("change-item");
    
     span1.setAttribute("type", "checkbox");
-    //span1.classList.add("checkbox");
+    // span1.classList.add("checkbox");
     span1.classList.add("check_box")
     //  span1.setAttribute("value","✏️")
     //  span1.text = "✏️";
@@ -63,21 +62,7 @@ function createList(str, chek){
 
    list.addEventListener("click", changeListItem);
 
-   function checking(e){  
-    
-    if(input.checked)
-    {
-    listText.classList.toggle("linethrough");
-    // span1.classList.toggle("check_box")
-    // input.classList.toggle("checked")     
-     
-    let x = arr.findIndex(item => item.text === listText.value.toLowerCase());
-    //  console.log(x);
-    arr[x].chek = arr[x].chek ? false : 'linethrough';     
-     LS.setItem("task",JSON.stringify(arr))
-    }         
-}
-label.addEventListener("click", checking)
+  
 //----удаляет по нажатию кшрзины эл. из списка и локал сторидж-----
    span2.addEventListener("click",function(e){ 
     let x = e.target.closest(".field").querySelector(".list_input").value;
@@ -89,18 +74,7 @@ label.addEventListener("click", checking)
    //    del();// удаляет  кнопки и пустой массив 
    })
 //-------------------------------------------------------------
-greyBtn.addEventListener("click", function(e){
-    if(input.checked)
-    {
-        let x = document.querySelector(".list_input");
-        blockLabel.remove(); 
-        arr = arr.filter(el => el.chek === false)
-        console.log(input.value);
-    }
-    
-    LS.setItem("task", JSON.stringify(arr));  
 
-   })
 }
 
 
@@ -110,7 +84,7 @@ form.addEventListener("submit", function(e){
     if(formInput.value){
         let objLS = {
             text:`${formInput.value.toLowerCase()}`,
-            chek:false,
+            check:false,
         }
     deleteBtns.classList.remove("d-none")
     arr.push(objLS);
@@ -150,7 +124,6 @@ function changeListItem(e){
     }
 
 }
-
  list.addEventListener("click", changeListItem);
 redBtn.addEventListener("click", function(e){   
     LS.clear()
@@ -159,7 +132,6 @@ redBtn.addEventListener("click", function(e){
     list.innerText = ''; 
     formInput.value = '';
 })
-
 
 
 

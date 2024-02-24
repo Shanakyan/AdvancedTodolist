@@ -78,7 +78,7 @@ body{
    
     cursor: pointer;  
     background-color: transparent;
-    border: 1px solid  rgb(39, 40, 41);;  
+    outline: 1px solid  rgb(39, 40, 41);;  
     color: rgb(39, 40, 41);
 }
 .field{
@@ -223,3 +223,13 @@ button:hover{
 .out-line{    
     border: 0;
 }
+.linethrough{
+    text-decoration: line-through;
+}
+/* .checked{
+    position: absolute;
+    width: 1.5em;
+    height: 1.55em;
+    margin-left: -2.2em;
+    background-image: url("./cheched.svg");    
+} */
